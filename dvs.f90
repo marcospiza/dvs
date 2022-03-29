@@ -50,6 +50,8 @@ read(*,*)
 dir_file = "cassava.w41" 
 call readcropfile(dir_file)
 
+
+
 ! read meteofile
 call readmeteodata("dados_meteo.csv")
 
@@ -68,13 +70,13 @@ write(10,"(A12,A5,A10)")"Data","DAP","DVS"
 write(10,"(A)")"****************************************"
 
 i = 1
-do while(t1900(i) < dateplant1900)
+do while(t1900(i) < dateplant1900  )
  i = i + 1
 enddo
 
 iemtsum = 0.d0
 idvs = 0.d0
-do while (idvs < 2.0) 
+do while (idvs < 2.0 .and. i < size(Tmed)) 
 
   iemtsum = iemtsum + (Tmed(i) - tbasem)
   if (iemtsum < tsumem) then
@@ -90,9 +92,11 @@ do while (idvs < 2.0)
      idvs = idvs + dvr
   endif
   dap = dap + 1
+  print*,date(i+1)
   write(10,"(A12,I5,F10.3 )")date(i+1),dap,idvs
   i = i + 1
 enddo
+
 
 close(10)
 

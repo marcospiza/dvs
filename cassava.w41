@@ -32,7 +32,7 @@ TSUM1    = 350.    ! temperature sum from emergence to anthesis [cel d]
 TSUM2    = 1000.    ! temperature sum from anthesis to maturity [cel d]
 DTSMTB   =   0.00,   0.00,     ! daily increase in temp. sum 
              15.00,  0.00,   
-             35.00,  10.00,    ! as function of av. temp. [cel; cel d]
+             35.00,  5.00,    ! as function of av. temp. [cel; cel d]
              45.00,  5.0
 DVSI     =    0.    ! initial DVS
 DVSEND   =    2.00  ! development stage at harvest (= 2.0 at maturity [-])
