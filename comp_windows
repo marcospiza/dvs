@@ -1,0 +1,1 @@
+x86_64-w64-mingw32-gfortran dvs.f90 -static -o dvs-Pro.exe -L. libttutilMingw32.a

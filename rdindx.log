@@ -1,0 +1,10 @@
+
+ Error(s) or Warning(s) while reading from cassava.w41
+
+ Line Error text                               Somewhere here
+ ==== ==========                               ==============
+   37 Day invalid                              [dateplant = 27-06-2019]
+                                                            ^--------^
+
+
+ Number of errors in data file CASSAVA.W41:   1
